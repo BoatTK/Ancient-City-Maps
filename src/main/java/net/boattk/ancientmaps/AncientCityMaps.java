@@ -2,6 +2,15 @@ package net.boattk.ancientmaps;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
+import net.minecraft.item.map.MapDecorationTypes;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.StructureTags;
+import net.minecraft.registry.tag.TagKey;
+import net.minecraft.util.Identifier;
+import net.minecraft.village.TradeOffers;
+import net.minecraft.village.VillagerProfession;
+import net.minecraft.world.gen.structure.Structure;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,6 +28,10 @@ public class AncientCityMaps implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		LOGGER.info("Hello Fabric world!");
+		TradeOfferHelper.registerVillagerOffers(VillagerProfession.CARTOGRAPHER, 1, factories -> {
+			factories.add(
+						new TradeOffers.SellMapFactory(14, (TagKey<Structure>)TagKey.of(RegistryKeys.STRUCTURE, Identifier.ofVanilla("on_ancient_city_maps")), "filled_map.mansion", MapDecorationTypes.MANSION, 12, 10)
+			);
+		});
 	}
 }

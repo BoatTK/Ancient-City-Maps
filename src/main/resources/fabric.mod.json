@@ -3,7 +3,7 @@
 	"id": "ancient-city-maps",
 	"version": "${version}",
 	"name": "Ancient City Maps",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "A Minecraft Mod that adds a map to Ancient Cities to Cartographer trades",
 	"authors": [
 		"Me!"
 	],
@@ -11,7 +11,7 @@
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/ancient-city-maps/icon.png",
 	"environment": "*",
 	"entrypoints": {
@@ -20,6 +20,9 @@
 		],
 		"fabric-datagen": [
 			"net.boattk.ancientmaps.AncientCityMapsDataGenerator"
+		],
+		"client": [
+			"net.boattk.ancientmaps.AncientMapsModClient"
 		]
 	},
 	"mixins": [
