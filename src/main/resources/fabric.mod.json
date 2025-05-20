@@ -8,8 +8,8 @@
 		"BoatTK"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/BoatTK/Ancient-City-Maps",
+		"sources": "https://github.com/BoatTK/Ancient-City-Maps"
 	},
 	"license": "MIT",
 	"icon": "assets/ancient-city-maps/icon.png",
@@ -30,7 +30,7 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.16.14",
-		"minecraft": "~1.21",
+		"minecraft": "<=1.21.4",
 		"java": ">=21",
 		"fabric-api": "*"
 	},
