@@ -3,12 +3,12 @@ package net.boattk.ancientmaps;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.StructureTags;
 import net.minecraft.tags.TagKey;
-import net.minecraft.world.entity.npc.VillagerProfession;
-import net.minecraft.world.entity.npc.VillagerTrades;
+import net.minecraft.world.entity.npc.villager.VillagerProfession;
+import net.minecraft.world.entity.npc.villager.VillagerTrades;
 import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraft.world.level.saveddata.maps.MapDecorationType;
 import net.minecraft.world.level.saveddata.maps.MapDecorationTypes;
@@ -54,7 +54,7 @@ public class AncientCityMaps {
 
     public static final Supplier<MapDecorationType> ANCIENT_CITY = MAP_DECORATIONS.register("ancient_city",
             () -> new MapDecorationType(
-                    ResourceLocation.withDefaultNamespace("ancient_city"),
+                    Identifier.withDefaultNamespace("ancient_city"),
                     true,
                     3827290,
                     false,
@@ -77,7 +77,7 @@ public class AncientCityMaps {
 
             trades.get(5).add(new VillagerTrades.TreasureMapForEmeralds(
                     16,
-                    TagKey.create(Registries.STRUCTURE, ResourceLocation.withDefaultNamespace("on_ancient_city_maps")),
+                    TagKey.create(Registries.STRUCTURE, Identifier.withDefaultNamespace("on_ancient_city_maps")),
                     "filled_map.ancient_city",
                     ancientCityHolder,
                     12,
